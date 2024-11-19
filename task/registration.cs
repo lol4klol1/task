@@ -26,12 +26,11 @@ namespace task
                 {
                     connection.Open();
 
-                    string sqlExpression = "INSERT INTO [User] ([IdUserRole], [FirstName], [Login], [Password]) " +
-                        "VALUES (@Role, @Name, @Login, @Password);";
+                    string sqlExpression = "INSERT INTO [Tasks] ([Tasker],([Responsible] " +
+                        "VALUES (@Tasker),(@Responsible);";
                     OleDbCommand sqlCommand = new OleDbCommand(sqlExpression, connection);
-                    sqlCommand.Parameters.AddWithValue("@FirstName", FirstNameTextBox.Text);
-                    sqlCommand.Parameters.AddWithValue("@Login", LoginTextBox.Text);
-                    sqlCommand.Parameters.AddWithValue("@Password", PasswordTextBox.Text);
+                    sqlCommand.Parameters.AddWithValue("@Responsible", FirstNameTextBox.Text);
+                    sqlCommand.Parameters.AddWithValue("Tasker", tasktextBox.Text);
 
                     int number = sqlCommand.ExecuteNonQuery();
                     if (number >= 1)
@@ -76,9 +75,15 @@ namespace task
 
         }
 
-        private void Зарегистрироваться_Click(object sender, EventArgs e)
+        private void reg_Click(object sender, EventArgs e)
         {
+           
+        }
 
-        }44444
+        private void nazad_Click(object sender, EventArgs e)
+        {
+            BDForm newForm = new BDForm();
+            newForm.ShowDialog();
+        }
     }
 }

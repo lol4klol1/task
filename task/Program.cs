@@ -16,7 +16,7 @@ namespace task
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new authorization());
+            Application.Run(new authorization());1211
         }
     }
 }

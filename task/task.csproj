@@ -67,6 +67,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task\DB.cs" />
+    <EmbeddedResource Include="BDForm.resx">
+      <DependentUpon>BDForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>authorization.cs</DependentUpon>
     </EmbeddedResource>
